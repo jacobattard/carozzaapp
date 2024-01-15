@@ -31,6 +31,10 @@ Route::get('/cars/{id}/edit',
     [CarController::class, 'edit']
 )->name('cars.edit');
 
+Route::post('/cars',
+    [CarController::class, 'store']
+)->name('cars.store');
+
 Route::get('/manufacturers',
     [ManufacturerController::class, 'index']
 )->name('manufacturers.index');

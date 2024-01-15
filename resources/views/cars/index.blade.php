@@ -28,8 +28,9 @@
                     </tr>
                   </thead>
                   <tbody>
-                    
-
+                    @if($message = session('message'))
+                      <div class="alert alert-success">{{ $message }}</div>
+                    @endif
                     @if($cars->count())
                       @foreach($cars as $index => $car)
                       <tr>
