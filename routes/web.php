@@ -23,6 +23,10 @@ Route::get('/cars/create',
     [CarController::class, 'create']
 )->name('cars.create');
 
+Route::post('/cars',
+    [CarController::class, 'store']
+)->name('cars.store');
+
 Route::get('/cars/{id}', 
     [CarController::class, 'details']
 )->name('cars.details');
@@ -31,9 +35,9 @@ Route::get('/cars/{id}/edit',
     [CarController::class, 'edit']
 )->name('cars.edit');
 
-Route::post('/cars',
-    [CarController::class, 'store']
-)->name('cars.store');
+Route::put('/cars/{id}',
+    [CarController::class, 'update']
+)->name('cars.update');
 
 Route::get('/manufacturers',
     [ManufacturerController::class, 'index']
