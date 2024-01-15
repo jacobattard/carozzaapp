@@ -26,11 +26,11 @@ Route::get('/cars/create',
 Route::get('/cars/{id}', 
     [CarController::class, 'details']
 )->name('cars.details');
-/*
-Route::get('/cars/{id}/edit', function($id) {
-    return view();
-});
-*/
+
+Route::get('/cars/{id}/edit',
+    [CarController::class, 'edit']
+)->name('cars.edit');
+
 Route::get('/manufacturers',
     [ManufacturerController::class, 'index']
 )->name('manufacturers.index');
