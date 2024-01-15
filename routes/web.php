@@ -39,6 +39,11 @@ Route::put('/cars/{id}',
     [CarController::class, 'update']
 )->name('cars.update');
 
+Route::delete('/cars/{id}',
+    [CarController::class, 'delete']
+)->name('cars.delete');
+
 Route::get('/manufacturers',
     [ManufacturerController::class, 'index']
 )->name('manufacturers.index');
+
